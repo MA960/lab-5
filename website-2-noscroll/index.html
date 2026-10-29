@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubeen Amir — Non-Scroll Dashboard CV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <input type="radio" name="dash-tab" id="tab-overview" checked>
+    <input type="radio" name="dash-tab" id="tab-skills">
+    <input type="radio" name="dash-tab" id="tab-projects">
+    <input type="radio" name="dash-tab" id="tab-certs">
+
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">MA</div>
+        <h2>Mubeen Amir</h2>
+        <p>Java Backend Dev</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <label for="tab-overview"><i class="fa-solid fa-user"></i> Overview</label>
+        <label for="tab-skills"><i class="fa-solid fa-code"></i> Skills</label>
+        <label for="tab-projects"><i class="fa-solid fa-folder"></i> Projects</label>
+        <label for="tab-certs"><i class="fa-solid fa-certificate"></i> Certifications</label>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="mailto:mubeenamir96@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
+      </div>
+    </aside>
+
+    <main class="content-frame">
+      <section class="panel panel-overview">
+        <h3>Backend Engineer & CS Undergraduate</h3>
+        <p class="bio">3rd Year CS Student at Qarshi University specializing in Java, Spring Boot, REST APIs, and PostgreSQL architecture.</p>
+
+        <div class="grid-stats">
+          <div class="stat-box">
+            <h4>6+</h4>
+            <p>Built Projects</p>
+          </div>
+          <div class="stat-box">
+            <h4>12+</h4>
+            <p>Certifications</p>
+          </div>
+        </div>
+
+        <div class="exp-preview">
+          <h4>Latest Role</h4>
+          <p><strong>Operations & Tech Support Manager</strong> — Vibe Hive Arena (2025–2026)</p>
+        </div>
+      </section>
+
+      <section class="panel panel-skills">
+        <h3>Technical Competencies</h3>
+        <div class="compact-grid">
+          <div><strong>Languages:</strong> Java, SQL, C++, JS, HTML, CSS</div>
+          <div><strong>Frameworks:</strong> Spring Boot, Spring MVC, JPA/Hibernate</div>
+          <div><strong>Backend:</strong> REST APIs, DTOs, JWT, Session Auth</div>
+          <div><strong>Tools:</strong> Maven, Git, GitHub, IntelliJ IDEA, curl</div>
+        </div>
+      </section>
+
+      <section class="panel panel-projects">
+        <h3>Featured Repositories</h3>
+        <div class="project-list">
+          <div class="p-item">
+            <strong>Interpersonal:</strong> Full-Stack Social API (Spring Boot/JWT/React)
+          </div>
+          <div class="p-item">
+            <strong>BOIS:</strong> Business Operations & Info System (SaaS Spec)
+          </div>
+          <div class="p-item">
+            <strong>Task Priority Manager:</strong> Spring Boot & PostgreSQL CRUD API
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-certs">
+        <h3>Key Certifications</h3>
+        <ul class="compact-list">
+          <li>Duke University — Java Programming</li>
+          <li>Board Infinity — Technical Writing</li>
+          <li>Fred Hutchinson — LaTeX & Overleaf</li>
+          <li>Google — Prompting & AI Essentials</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
