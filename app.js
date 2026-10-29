@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const code = document.querySelector('#health-code');
     const rail = document.querySelector('#rail-status');
     const healthDot = document.querySelector('.health-dot');
+<<<<<<< HEAD
     if (label) label.textContent = data.status === 'operational' ? 'All systems operational' : data.status === 'local' ? 'Local static mode' : 'Status unavailable';
     if (code) code.textContent = data.statusCode || '200 OK';
     if (rail) rail.textContent = data.availability || 'available for work';
@@ -67,6 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     ? Promise.resolve({ status: 'local', statusCode: 'LOCAL', availability: 'available locally' })
     : fetch('/api/status').then((response) => response.ok ? response.json() : Promise.reject(new Error('status unavailable')));
   statusRequest.then(updateStatus).catch(() => {
+=======
+    if (label) label.textContent = data.status === 'operational' ? 'All systems operational' : 'Status unavailable';
+    if (code) code.textContent = data.statusCode || '200 OK';
+    if (rail) rail.textContent = data.availability || 'available for work';
+    healthDot?.classList.toggle('is-degraded', data.status !== 'operational');
+    if (lastSync) lastSync.textContent = formatTime();
+  };
+
+  fetch('/api/status').then((response) => response.ok ? response.json() : Promise.reject(new Error('status unavailable'))).then(updateStatus).catch(() => {
+>>>>>>> e6f1d548fe82ccc98c8dcf8fce0e0b68044e0b3f
     updateStatus({ status: 'degraded', statusCode: '—', availability: 'status unavailable' });
   });
 });
