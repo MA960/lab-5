@@ -1,17 +1,1 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = Array.from(document.querySelectorAll('input[name="dash-tab"]'));
-
-  // Keyboard navigation support for 100vh viewport
-  document.addEventListener('keydown', (e) => {
-    const currentIndex = tabs.findIndex(tab => tab.checked);
-    if (currentIndex === -1) return;
-
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      const nextIndex = (currentIndex + 1) % tabs.length;
-      tabs[nextIndex].checked = true;
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      const prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-      tabs[prevIndex].checked = true;
-    }
-  });
-});
+const buttons=[...document.querySelectorAll('[data-panel]')],panels=[...document.querySelectorAll('.panel')];buttons.forEach(button=>button.addEventListener('click',()=>{buttons.forEach(b=>b.classList.toggle('active',b===button));panels.forEach(p=>p.classList.toggle('active',p.id===button.dataset.panel));}));const clock=document.querySelector('#clock');const tick=()=>{clock.textContent=new Intl.DateTimeFormat('en',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(new Date())};tick();setInterval(tick,1000);

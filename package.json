@@ -1,9 +1,0 @@
-{
-  "name": "mubeen-backend-hub",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Backend-oriented portfolio hub for Mubeen Amir",
-  "scripts": {
-    "start": "node server.js"
-  }
-}

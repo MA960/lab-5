@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/website-1-scrollable/", "destination": "/website-1-scrollable/index.html" },
+    { "source": "/website-2-noscroll/", "destination": "/website-2-noscroll/index.html" },
+    { "source": "/website-3-multipage/", "destination": "/website-3-multipage/index.html" }
+  ]
+}
