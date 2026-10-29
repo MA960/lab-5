@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Automatically detect and highlight active navbar link
+  // Sync URL with active link
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav a');
 
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath) {
+    if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
     }
   });
 
-  // Client-side search filter for Projects and Certifications
+  // Client-side search filter
   const searchInput = document.getElementById('search-filter');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
@@ -20,8 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cards = document.querySelectorAll('.card');
 
       cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(query) ? 'flex' : 'none';
+        card.style.display = card.textContent.toLowerCase().includes(query) ? 'flex' : 'none';
       });
     });
   }

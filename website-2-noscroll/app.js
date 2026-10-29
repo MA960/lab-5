@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = Array.from(document.querySelectorAll('input[name="dash-tab"]'));
 
+  // Keyboard navigation for terminal tabs
   document.addEventListener('keydown', (e) => {
     const currentIndex = tabs.findIndex(tab => tab.checked);
     if (currentIndex === -1) return;
